@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microsoft Ecosystem on Muhammad Saiful Islam</title>
+    <link>https://saiful.web.id/categories/microsoft-ecosystem/</link>
+    <description>Recent content in Microsoft Ecosystem on Muhammad Saiful Islam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <managingEditor>muhammad@saiful.web.id (Muhammad Saiful Islam)</managingEditor>
+    <webMaster>muhammad@saiful.web.id (Muhammad Saiful Islam)</webMaster>
+    <lastBuildDate>Sun, 31 May 2015 08:57:01 +0000</lastBuildDate>
+    <atom:link href="https://saiful.web.id/categories/microsoft-ecosystem/" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lifecycle Sebuah Windows App</title>
+      <link>https://saiful.web.id/2015/05/lifecycle-sebuah-windows-app/</link>
+      <pubDate>Sun, 31 May 2015 08:57:01 +0000</pubDate>
+      <author>muhammad@saiful.web.id (Muhammad Saiful Islam)</author>
+      <guid>https://saiful.web.id/2015/05/lifecycle-sebuah-windows-app/</guid>
+      <description>Dalam merancang sebuah Windows App, kita perlu tahu bagaimana sebuah aplikasi &amp;ldquo;menjalani kehidupannya&amp;rdquo;, karena skema hidup Windows App sedikit berbeda dengan aplikasi desktop pada umumnya. Dengan memperhatikan lifecycle sebuah aplikasi, kita bisa menghadirkan user experience yang nyaman bagi pengguna App kita.
+Secara umum, lifecycle (daur hidup) sebuah Windows App bisa digambarkan dengan state-diagram berikut 1:
+
+</description>
+    </item>
+    
+    <item>
+      <title>Windows App Cert Kit: Periksa App Sebelum Upload ke Store</title>
+      <link>https://saiful.web.id/2015/05/windows-app-cert-kit-periksa-app-sebelum-upload-ke-store/</link>
+      <pubDate>Sun, 31 May 2015 04:38:50 +0000</pubDate>
+      <author>muhammad@saiful.web.id (Muhammad Saiful Islam)</author>
+      <guid>https://saiful.web.id/2015/05/windows-app-cert-kit-periksa-app-sebelum-upload-ke-store/</guid>
+      <description>Salah satu tahapan yang akan dilalui App kita sebelum ditayangkan oleh Microsoft di Store (baik Windows Store maupun Windows Phone Store) adalah pengujian. Semua aplikasi yang akan ditayangkan pasti diuji dulu secara otomatis. Beberapa aplikasi akan diuji secara manual, tapi mayoritas tidak akan melalu pengujian manual lagi.
+Nah &amp;hellip; kayaknya repot ya kalau misalnya buat App yang ukurannya besar, terus sudah upload lama-lama (apalagi kalau pakai koneksi umum di Indonesia — lain hal kalau misalnya pakai koneksi di kampus :D), terus ternyata hasil pengujiannya gagal?
+Untungnya, Microsoft punya aplikasi Windows App Certification Kit. Aplikasi ini sudah include dengan Windows Development Kit yang bisa diinstal bersama Visual Studio. Dengan aplikasi ini, kita bisa menguji App yang sudah dibuat secara lokal. Konon katanya, kalau sudah lolos pengujian di sini, kemungkinan besar akan lolos juga di Store karena metode pengujiannya sama.
+</description>
+    </item>
+    
+    <item>
+      <title>Implementasi Asynchronous pada Feed Reader (C#)</title>
+      <link>https://saiful.web.id/2015/05/implementasi-asynchronous-pada-feed-reader-c/</link>
+      <pubDate>Fri, 29 May 2015 14:05:08 +0000</pubDate>
+      <author>muhammad@saiful.web.id (Muhammad Saiful Islam)</author>
+      <guid>https://saiful.web.id/2015/05/implementasi-asynchronous-pada-feed-reader-c/</guid>
+      <description>Kemarin, saya share mengenai teknik pemrograman asynchronous pada C# menggunakan await dan async. Sekarang, saya akan coba kasih contoh nyata dari kode program POLBAN News Reader yang saya buat. 🙂
+Jadi, pada aplikasi saya ada sebuah class bernama FeedDataSource yang berfungsi menampung daftar item dari RSS website POLBAN dan mengambil item-item tersebut. Daftar item ditampung pada sebuah properti Feeds seperti berikut:
+private ObservableCollection&amp;lt;FeedItem&amp;gt; _Feeds = new ObservableCollection&amp;lt;FeedItem&amp;gt;(); public ObservableCollection&amp;lt;FeedItem&amp;gt; Feeds { get { return _Feeds; } }  
+</description>
+    </item>
+    
+    <item>
+      <title>Asynchronous dengan &#34;await&#34; dan &#34;async&#34; pada C#</title>
+      <link>https://saiful.web.id/2015/05/asynchronous-await-async-c/</link>
+      <pubDate>Wed, 27 May 2015 22:24:50 +0000</pubDate>
+      <author>muhammad@saiful.web.id (Muhammad Saiful Islam)</author>
+      <guid>https://saiful.web.id/2015/05/asynchronous-await-async-c/</guid>
+      <description>Dulu, saat saya sering membuat halaman-halaman web sederhana, saya beberapa kali memanfaatkan asynchronous programming untuk beberapa keperluan. Secara sederhana, asynchronous programming adalah teknik di mana suatu fungsi berjalan dengan thread yang berbeda dengan thread utama, sehingga bisa menjalankan dua atau lebih fungsi dalam waktu yang bersamaan.
+Sebagai contoh, jika saya memiliki fungsi getData() yang berfungsi mengambil data siswa dari http://mhs.polban.ac.id/ misalnya, maka waktu prosesnya akan bervariasi pada berbagai kondisi. Jika kondisinya stabil (baik pada client maupun pada server) maka delay yang dirasakan mungkin tidak signifikan.
+</description>
+    </item>
+    
+    <item>
+      <title>Universal Apps, Write-Once-(Almost)-Run-Everywhere</title>
+      <link>https://saiful.web.id/2015/05/universal-apps-write-once-almost-run-everywhere/</link>
+      <pubDate>Sun, 10 May 2015 11:25:09 +0000</pubDate>
+      <author>muhammad@saiful.web.id (Muhammad Saiful Islam)</author>
+      <guid>https://saiful.web.id/2015/05/universal-apps-write-once-almost-run-everywhere/</guid>
+      <description>Seumur-umur membuat software (kecil-kecilan), saya baru tahu beberapa waktu terakhir kalau di ekosistem Windows Apps saat ini ada konsep Universal Apps. Pertama kali mendengar istilah ini, saya pikir dengan Universal Apps kita dapat membuat suatu aplikasi Windows Apps dan aplikasi yang sama juga berjalan di Windows Phone.
+Well, setelah baca-baca di berbagai sumber (terutama MSDN), asumsi saya ternyata &amp;#8220;benar&amp;#8221; untuk Windows 10. (Yeay! Write once, run everywhere!) Apalagi santer dibicarakan di berbagai rilis-rilis yang kita baca kalau Windows 10 ini memang akan jadi one OS to rule them all. Di Windows 10, ada suatu konsep bernama Universal Windows Platform yang intinya setiap device yang berbeda (desktop, mobile, &amp;hellip;, bahkan Xbox) memiliki implementasi Windows Core yang sama, sehingga aplikasi yang dikembangkan dapat memanfaatkan core tersebut untuk mampu berjalan di berbagai device.
+Nah, bagaimana untuk adiknya, Windows 8.1?
+</description>
+    </item>
+    
+    
+  </channel>
+</rss>

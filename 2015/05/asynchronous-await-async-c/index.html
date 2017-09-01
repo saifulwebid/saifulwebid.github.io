@@ -1,0 +1,193 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id-id" lang="id-id">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.25.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Asynchronous dengan &#34;await&#34; dan &#34;async&#34; pada C# &middot; Muhammad Saiful Islam</title>
+  
+
+  
+  <link rel="stylesheet" href="https://saiful.web.id/css/poole.css">
+  <link rel="stylesheet" href="https://saiful.web.id/css/syntax.css">
+  <link rel="stylesheet" href="https://saiful.web.id/css/hyde.css">
+  <link rel="stylesheet" href="https://saiful.web.id/css/saifulwebid.css">
+
+  
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+  
+  
+
+  
+    
+      
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-85966390-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+    
+  
+</head>
+
+<body class="  ">
+
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://saiful.web.id/"><h1>saiful<span>.web.id</h1></a>
+      <p class="lead">
+       karena hidup terakhir seseorang di muka bumi adalah tulisannya 
+      </p>
+    </div>
+
+    <div class="sidebar-footer">
+            <ul class="sidebar-nav">
+        <li><a href="/">Home</a> </li>
+        
+          <li><a href="/built-with/"> Behind the Scene </a></li>
+        
+          <li><a href="/profil-singkat/"> Profil Singkat </a></li>
+        
+      </ul>
+
+      <ul class="sidebar-nav">
+        
+          <li><a href="https://saiful.web.id/categories">Categories</a>
+        
+          <li><a href="https://saiful.web.id/tags">Tags</a>
+        
+      </ul>
+
+      <p class="sidebar-expanded"><span><a href="https://saiful.web.id/categories/arsip-lama/">sejak 2008</a></span> <span>hingga <a href="https://saiful.web.id/blog/" title="Site built at 2017-09-01 04:02:37">2017</a></span> </p>
+
+    </div>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1 class="post-title">Asynchronous dengan &#34;await&#34; dan &#34;async&#34; pada C#</h1>
+			  <span class="post-date">
+			  Wed, May 27, 2015
+
+		        
+		        &bull; Category:
+		        <a href="https://saiful.web.id/categories/microsoft-ecosystem/">Microsoft Ecosystem</a>
+		        
+			  </span>
+
+      
+      
+			      <p>Dulu, saat saya sering membuat halaman-halaman web sederhana, saya beberapa kali memanfaatkan asynchronous programming untuk beberapa keperluan. Secara sederhana, asynchronous programming adalah teknik di mana suatu fungsi berjalan dengan thread yang berbeda dengan thread utama, sehingga bisa menjalankan dua atau lebih fungsi dalam waktu yang bersamaan.</p>
+
+<p>Sebagai contoh, jika saya memiliki fungsi <code>getData()</code> yang berfungsi mengambil data siswa dari <a href="http://mhs.polban.ac.id/">http://mhs.polban.ac.id/</a> misalnya, maka waktu prosesnya akan bervariasi pada berbagai kondisi. Jika kondisinya stabil (baik pada client maupun pada server) maka delay yang dirasakan mungkin tidak signifikan.</p>
+
+<p>Namun, bagaimana jika kondisinya tidak stabil? Misalnya, client hanya dapat jaringan EDGE, kemudian server juga sedang berat diakses? Bagaimana jika fungsi</p>
+
+<p><code>getData()</code> sedang berjalan lalu user ternyata berubah pikiran dan ingin mengakses fitur lain? Kemungkinan besar yang terjadi: muncullah tulisan &ldquo;(Not Responding)&rdquo; di samping tulisan &ldquo;Mozilla Firefox&rdquo;.</p>
+
+<p>Nah, teknik asynchronous programming dapat mengatasi hal seperti ini. Namun biasanya implementasinya agak rumit. Ketika kita menjalankan <code>getData()</code> secara asynchronous, kita harus menyediakan fungsi yang akan dipanggil sebagai callback. Misalnya, setelah <code>getData()</code> dipanggil, callbacknya adalah: hasil dari <code>getData()</code> akan ditampilkan dalam sebuah container.</p>
+
+<p>Pada teknologi Microsoft sendiri, sejak Visual Studio 2012 diluncurkan, implementasi asynchronous dapat sangat mudah dilakukan dengan dua buah keyword baru: <code>await</code> dan <code>async</code>. Dan, subhanallah, ini gampang banget! Saat mengimplementasikan ini untuk <a href="https://github.com/saifulwebid/polban-news-reader">tugas Microsoft Student Partner saya</a>, saya tidak merasa membuat sebuah asynchronous call seribet zaman dahulu!</p>
+
+<p>Coba Anda lihat kode program berikut <a href="https://github.com/saifulwebid/polban-news-reader">1</a>:</p>
+
+<pre><code>private async void ButtonClick(object sender, EventArgs e)
+{
+	var client = new WebClient();
+	var imageData = await client.DownloadDataTaskAsync(&quot;http://image-url&quot;);
+	pictureBox.Image = Image.FromStream(new MemoryStream(imageData));
+}
+</code></pre>
+
+<p>Lihatlah: sekilas, seperti tidak membuat asynchronous call yang ribet! Baris kelima otomatis menjadi callback dari asynchronous call pada baris keempat.</p>
+
+<p>Perhatikan bahwa pada baris pertama, ada keyword async. Keyword ini menunjukkan bahwa method <code>ButtonClick()</code> akan memiliki pemanggilan yang bersifat asynchronous. Pemanggilan ini ditunjukkan pada keyword await pada baris 4.</p>
+
+<p>Ya, memang pemanggilan asynchronous call ini bukan berarti membuat sebuah thread baru. Kalau ada thread baru, berarti bisa jadi ada dua proses yang berjalan bersamaan ya? (CMIIW). Tapi kalau ini tidak <a href="http://msdn.microsoft.com/en-ca/library/system.net.webclient%28v=vs.110%29.aspx">2</a>.</p>
+
+<hr />
+
+<h3 id="getting-started">Getting Started</h3>
+
+<p>Pada .NET Framework 4.5, banyak method baru yang memanfaatkan fitur ini, ditandai dengan akhiran &#8220;Async&#8221; pada nama method-nya dan nilai kembali berupa Task atau Task<T>. Sebagai contoh, <a href="http://msdn.microsoft.com/en-ca/library/system.net.webclient%28v=vs.110%29.aspx">WebClient</a> memiliki method <a href="http://msdn.microsoft.com/en-ca/library/hh138334(v=vs.110).aspx"><code>DownloadDataTaskAsync()</code></a> sebagai komplemen dari <a href="http://msdn.microsoft.com/en-ca/library/ms144188(v=vs.110).aspx"><code>DownloadData()</code></a> <a href="https://github.com/saifulwebid/polban-news-reader">1</a>.</p>
+
+<p>Pada Windows Runtime (WinRT), hampir semua operasi berjalan secara asynchronous. Semua operasi yang kemungkinan dapat berjalan di atas 50 ms diimplementasikan sebagai fungsi asynchronous. Operasi-operasi seperti networking, file access, API sensor, dan operasi lain yang terkait dengan I/O <a href="https://github.com/saifulwebid/polban-news-reader">1</a>.</p>
+
+<h3 id="referensi">Referensi</h3>
+
+<p><a href="https://github.com/saifulwebid/polban-news-reader">1</a> Marukovich, Andrei. 2013. &#8220;<a href="http://blogs.msdn.com/b/cdndevs/archive/2013/12/18/c-async-and-await-why-do-we-need-them-part-1.aspx">C# async and await: Why Do We Need Them?</a>&#8221; MSDN Canadian Developer Connection.</p>
+
+<p><a href="http://msdn.microsoft.com/en-ca/library/system.net.webclient%28v=vs.110%29.aspx">2</a> &#8220;<a href="https://msdn.microsoft.com/en-us/library/hh191443.aspx">Asynchronous Programming with Async and Await (C# and Visual Basic)</a>&#8220;. MSDN.</p>
+			</div>
+
+			
+				<h2>Comments</h2>
+				
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "saifulwebid" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+			
+		</div>
+
+    <div id="footer">
+            <ul class="sidebar-nav">
+        <li><a href="/">Home</a> </li>
+        
+          <li><a href="/built-with/"> Behind the Scene </a></li>
+        
+          <li><a href="/profil-singkat/"> Profil Singkat </a></li>
+        
+      </ul>
+
+      <ul class="sidebar-nav">
+        
+          <li><a href="https://saiful.web.id/categories">Categories</a>
+        
+          <li><a href="https://saiful.web.id/tags">Tags</a>
+        
+      </ul>
+
+      <p class="sidebar-expanded"><span><a href="https://saiful.web.id/categories/arsip-lama/">sejak 2008</a></span> <span>hingga <a href="https://saiful.web.id/blog/" title="Site built at 2017-09-01 04:02:37">2017</a></span> </p>
+
+    </div>
+  </body>
+</html>
+

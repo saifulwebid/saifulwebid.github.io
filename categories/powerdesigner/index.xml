@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Powerdesigner on Muhammad Saiful Islam</title>
+    <link>https://saiful.web.id/categories/powerdesigner/</link>
+    <description>Recent content in Powerdesigner on Muhammad Saiful Islam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <managingEditor>muhammad@saiful.web.id (Muhammad Saiful Islam)</managingEditor>
+    <webMaster>muhammad@saiful.web.id (Muhammad Saiful Islam)</webMaster>
+    <lastBuildDate>Sun, 27 Mar 2016 10:19:23 +0000</lastBuildDate>
+    <atom:link href="https://saiful.web.id/categories/powerdesigner/" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Membuat Garis Lurus di PowerDesigner</title>
+      <link>https://saiful.web.id/2016/03/membuat-garis-lurus-di-powerdesigner/</link>
+      <pubDate>Sun, 27 Mar 2016 10:19:23 +0000</pubDate>
+      <author>muhammad@saiful.web.id (Muhammad Saiful Islam)</author>
+      <guid>https://saiful.web.id/2016/03/membuat-garis-lurus-di-powerdesigner/</guid>
+      <description>Di semester 4 ini salah satu mata kuliah yang saya pelajari adalah Analisis dan Perancangan Perangkat Lunak 1 (APPL-1). Pada mata kuliah ini, kami menggunakan software PowerDesigner untuk membuat use case diagram dan kawan-kawannya.
+Salah satu masalah yang muncul adalah ketika membuat asosiasi dari actor ke use case, garis yang muncul tidak bisa lurus. Bentuknya garis patah-patah, seperti ini:
+Padahal, notasi yang umum digunakan, garis asosiasi dari actor ke use case itu wujudnya berupa garis lurus.
+</description>
+    </item>
+    
+    
+  </channel>
+</rss>

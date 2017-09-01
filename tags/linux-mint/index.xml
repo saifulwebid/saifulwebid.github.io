@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux Mint on Muhammad Saiful Islam</title>
+    <link>https://saiful.web.id/tags/linux-mint/</link>
+    <description>Recent content in Linux Mint on Muhammad Saiful Islam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <managingEditor>muhammad@saiful.web.id (Muhammad Saiful Islam)</managingEditor>
+    <webMaster>muhammad@saiful.web.id (Muhammad Saiful Islam)</webMaster>
+    <lastBuildDate>Sat, 01 Nov 2014 15:33:16 +0000</lastBuildDate>
+    <atom:link href="https://saiful.web.id/tags/linux-mint/" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Repositori Lokal Linux Mint 17 Qiana</title>
+      <link>https://saiful.web.id/2014/11/repositori-lokal-linux-mint-17-qiana/</link>
+      <pubDate>Sat, 01 Nov 2014 15:33:16 +0000</pubDate>
+      <author>muhammad@saiful.web.id (Muhammad Saiful Islam)</author>
+      <guid>https://saiful.web.id/2014/11/repositori-lokal-linux-mint-17-qiana/</guid>
+      <description>Hal yang saya lakukan ketika baru melakukan instalasi Ubuntu (dan turunannya, seperti Linux Mint yang saya gunakan sekarang) adalah mengganti sumber repositori yang digunakan ke mirror-mirror yang ada di Indonesia (seperti Kambing UI, atau FTP ITB, dan mirror lainnya). Ketika saya sempat mencoba Ubuntu 14.04 LTS beberapa waktu lalu, saya menggunakan mirror ITB.
+Ketika saat ini saya menggunakan Linux Mint 17 Qiana, saya menemukan bahwa ITB tidak melakukan mirror terhadap repositori Linux Mint. Hasil Google-ing singkat menunjukkan bahwa Kambing UI dan repositori UKDW-lah yang melakukan mirror terhadap repositori Linux Mint.
+Sehingga, saya membuka Terminal dan mengetikkan &amp;hellip;
+sudo nano /etc/apt/sources.list  Tapi ternyata, hal ini yang saya temui:
+Lho, ke mana puluhan baris yang biasa saya temui di /etc/apt/sources.list milik Ubuntu itu?
+</description>
+    </item>
+    
+    <item>
+      <title>Touchpad Indicator Untuk Ubuntu (dan Linux Mint)</title>
+      <link>https://saiful.web.id/2014/11/touchpad-indicator-untuk-ubuntu-dan-linux-mint/</link>
+      <pubDate>Sat, 01 Nov 2014 15:11:59 +0000</pubDate>
+      <author>muhammad@saiful.web.id (Muhammad Saiful Islam)</author>
+      <guid>https://saiful.web.id/2014/11/touchpad-indicator-untuk-ubuntu-dan-linux-mint/</guid>
+      <description>Saya menggunakan Linux Mint 17 Qiana di laptop saya (yang berbasis Ubuntu 14.04 LTS). Penggunaan saya sehari-hari dengan laptop ini lebih dominan menggunakan mouse eksternal dibandingkan dengan touchpad dan trackpad-nya (saya pakai Lenovo ThinkPad E440). Sehingga, akan nyaman bagi saya untuk dapat mematikan touchpad-nya ketika saya menggunakan mouse eksternal — apalagi di _keyboard_ laptop ini tidak ada switch untuk mematikan touchpad-nya.
+Untuk keperluan ini, saya menggunakan touchpad-indicator:
+ sudo add-apt-repository ppa:atareao/atareao sudo apt-get update sudo apt-get install touchpad-indicator
+Selanjutnya, aplikasi ini di-launch untuk pertama kalinya dari launcher.
+
+</description>
+    </item>
+    
+    
+  </channel>
+</rss>

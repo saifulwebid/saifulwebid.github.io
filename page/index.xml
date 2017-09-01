@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Page on Muhammad Saiful Islam</title>
+    <link>https://saiful.web.id/page/</link>
+    <description>Recent content in Page on Muhammad Saiful Islam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <managingEditor>muhammad@saiful.web.id (Muhammad Saiful Islam)</managingEditor>
+    <webMaster>muhammad@saiful.web.id (Muhammad Saiful Islam)</webMaster>
+    <lastBuildDate>Sun, 30 Oct 2016 21:52:55 +0700</lastBuildDate>
+    <atom:link href="https://saiful.web.id/page/" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Behind the Scene</title>
+      <link>https://saiful.web.id/built-with/</link>
+      <pubDate>Sun, 30 Oct 2016 21:52:55 +0700</pubDate>
+      <author>muhammad@saiful.web.id (Muhammad Saiful Islam)</author>
+      <guid>https://saiful.web.id/built-with/</guid>
+      <description>Sejak November 2016, situs ini ditenagai teknologi-teknologi berikut:
+ Hugo, sebuah static site generator yang dibangun dengan bahasa Go. Hugo berlisensi Apache-2.0. Theme Hyde buatan Steve Francia yang sudah saya modifikasi sedikit. Hyde berlisensi MIT. Di-host di GitHub Pages dengan CloudFlare di atasnya. Favicon dari emoji Apple yang diunduh dari http://kawaiidarkcore.deviantart.com/art/All-Emojis-Apple-PNG-524289664.  </description>
+    </item>
+    
+    <item>
+      <title>Profil Singkat</title>
+      <link>https://saiful.web.id/profil-singkat/</link>
+      <pubDate>Thu, 03 Sep 2015 16:02:35 +0000</pubDate>
+      <author>muhammad@saiful.web.id (Muhammad Saiful Islam)</author>
+      <guid>https://saiful.web.id/profil-singkat/</guid>
+      <description>Nama saya Saiful. Saya adalah seorang mahasiswa program studi D4-Teknik Informatika di Jurusan Teknik Komputer dan Informatika Politeknik Negeri Bandung. Saya juga seorang Microsoft Student Partner.
+Anda bisa menghubungi saya di muhammad@saiful.web.id.
+
+saiful.web.id saiful.web.id adalah domain saya sejak 30 Agustus 2009. Saya membuat domain ini setelah membaca sebuah artikel di majalah CHIP saat itu tentang domain Indonesia. Saat itu, saya masih menggunakan hosting gratisan. (Dan kalau tidak salah harga domain .</description>
+    </item>
+    
+    
+  </channel>
+</rss>

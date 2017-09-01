@@ -1,0 +1,195 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id-id" lang="id-id">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.25.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Membuat Garis Lurus di PowerDesigner &middot; Muhammad Saiful Islam</title>
+  
+
+  
+  <link rel="stylesheet" href="https://saiful.web.id/css/poole.css">
+  <link rel="stylesheet" href="https://saiful.web.id/css/syntax.css">
+  <link rel="stylesheet" href="https://saiful.web.id/css/hyde.css">
+  <link rel="stylesheet" href="https://saiful.web.id/css/saifulwebid.css">
+
+  
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+  
+  
+
+  
+    
+      
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-85966390-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+    
+  
+</head>
+
+<body class="  ">
+
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://saiful.web.id/"><h1>saiful<span>.web.id</h1></a>
+      <p class="lead">
+       karena hidup terakhir seseorang di muka bumi adalah tulisannya 
+      </p>
+    </div>
+
+    <div class="sidebar-footer">
+            <ul class="sidebar-nav">
+        <li><a href="/">Home</a> </li>
+        
+          <li><a href="/built-with/"> Behind the Scene </a></li>
+        
+          <li><a href="/profil-singkat/"> Profil Singkat </a></li>
+        
+      </ul>
+
+      <ul class="sidebar-nav">
+        
+          <li><a href="https://saiful.web.id/categories">Categories</a>
+        
+          <li><a href="https://saiful.web.id/tags">Tags</a>
+        
+      </ul>
+
+      <p class="sidebar-expanded"><span><a href="https://saiful.web.id/categories/arsip-lama/">sejak 2008</a></span> <span>hingga <a href="https://saiful.web.id/blog/" title="Site built at 2017-09-01 04:02:37">2017</a></span> </p>
+
+    </div>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1 class="post-title">Membuat Garis Lurus di PowerDesigner</h1>
+			  <span class="post-date">
+			  Sun, Mar 27, 2016
+
+		        
+		        &bull; Category:
+		        <a href="https://saiful.web.id/categories/powerdesigner/">PowerDesigner</a>
+		        
+			  </span>
+
+      
+      
+			      <p>Di semester 4 ini salah satu mata kuliah yang saya pelajari adalah Analisis dan Perancangan Perangkat Lunak 1 (APPL-1). Pada mata kuliah ini, kami menggunakan <em>software</em> PowerDesigner untuk membuat <em>use case diagram</em> dan kawan-kawannya.</p>
+
+<p>Salah satu masalah yang muncul adalah ketika membuat asosiasi dari <em>actor</em> ke <em>use case</em>, garis yang muncul tidak bisa lurus. Bentuknya garis patah-patah, seperti ini:</p>
+
+<p><img src="/blog/wordpress-posts/2016-03-27-membuat-garis-lurus-di-powerdesigner/garis-lurus-powerdesigner-1.png" alt="" /></p>
+
+<p>Padahal, notasi yang umum digunakan, garis asosiasi dari <em>actor</em> ke <em>use case</em> itu wujudnya berupa garis lurus.</p>
+
+<p>Bukan hanya satu-dua orang yang mencoba, tapi kami sekelas mencoba meluruskan garis bengkok ini sulitnya minta ampun. (Lain halnya kalau &ldquo;membengkokkan garis lurus&rdquo; yang kami pelajari di mata kuliah Aljabar Linear. Lebih mudah itu.)</p>
+
+<p>Ternyata, setelah mencari-cari di <em>search engine</em> agak dalam, ketemulah <em><a href="http://codeverge.com/sybase.powerdesigner.general/lines-with-angles/832901">thread ini</a></em>. Di sana ada <em>statement</em> seperti ini:</p>
+
+<blockquote>
+<p>What line mode have you selected? There are a number of different modes. [&hellip;] First is the jagged line (lightening bolt). This mode is all straight lines with elbows. <strong>No attempt is made to keep the lines horizontal or vertical.</strong></p>
+</blockquote>
+
+<p>Membaca <em>statement</em> itu saya mendapat <em>feeling</em> bahwa ini adalah jawaban yang saya (dan kawan-kawan) cari. Setelah mencoba beberapa kali, akhirnya garis bengkok itu berhasil diluruskan.</p>
+
+<p><img src="/blog/wordpress-posts/2016-03-27-membuat-garis-lurus-di-powerdesigner/garis-lurus-powerdesigner-6.png" alt="" /></p>
+
+<p>Caranya ternyata mudah: <strong>gunakan mode Corners &ldquo;jagged line/lightning bolt&rdquo; pada format asosiasi yang dibentuk</strong>.</p>
+
+<p>Lengkapnya seperti ini:</p>
+
+<p>Pertama, klik kanan pada garis asosiasi. Pilih menu Format.</p>
+
+<p><img src="/blog/wordpress-posts/2016-03-27-membuat-garis-lurus-di-powerdesigner/garis-lurus-powerdesigner-2.png" alt="" /></p>
+
+<p>Pada <em>window</em> &ldquo;Symbol Format&rdquo; yang muncul, pada <em>tab</em> &ldquo;Line Style&rdquo;, pilih opsi pertama (bergambar <em>jagged line</em> atau seperti garis kilat) pada pilihan &ldquo;Corners&rdquo;.</p>
+
+<p><img src="/blog/wordpress-posts/2016-03-27-membuat-garis-lurus-di-powerdesigner/garis-lurus-powerdesigner-3.png" alt="" /></p>
+
+<p>Selanjutnya, tekan tombol Ctrl di <em>keyboard</em>, lalu klik kiri pada sudut yang ingin dihilangkan.</p>
+
+<p><img src="/blog/wordpress-posts/2016-03-27-membuat-garis-lurus-di-powerdesigner/garis-lurus-powerdesigner-4.png" alt="" /></p>
+
+<p>Voila!</p>
+
+<p><img src="/blog/wordpress-posts/2016-03-27-membuat-garis-lurus-di-powerdesigner/garis-lurus-powerdesigner-5.png" alt="" /></p>
+
+<p>Garis yang bengkok sudah bisa diluruskan. Dengan cara yang sama, kita bisa &ldquo;membengkokkan&rdquo; garis lurus dengan menambah sudut-sudut lain pada garis yang ada.</p>
+
+<p>Semoga bermanfaat. (Khususnya untuk saya sendiri — hal-hal begini, kalau tidak dicatat di suatu tempat, pasti akan mudah terlupakan.)</p>
+			</div>
+
+			
+				<h2>Comments</h2>
+				
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    this.page.identifier = '5232724529';
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "saifulwebid" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+			
+		</div>
+
+    <div id="footer">
+            <ul class="sidebar-nav">
+        <li><a href="/">Home</a> </li>
+        
+          <li><a href="/built-with/"> Behind the Scene </a></li>
+        
+          <li><a href="/profil-singkat/"> Profil Singkat </a></li>
+        
+      </ul>
+
+      <ul class="sidebar-nav">
+        
+          <li><a href="https://saiful.web.id/categories">Categories</a>
+        
+          <li><a href="https://saiful.web.id/tags">Tags</a>
+        
+      </ul>
+
+      <p class="sidebar-expanded"><span><a href="https://saiful.web.id/categories/arsip-lama/">sejak 2008</a></span> <span>hingga <a href="https://saiful.web.id/blog/" title="Site built at 2017-09-01 04:02:37">2017</a></span> </p>
+
+    </div>
+  </body>
+</html>
+
